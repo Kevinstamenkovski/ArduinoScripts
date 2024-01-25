@@ -31,17 +31,14 @@ void setup() {
   Ethernet.begin(mac);
   client.begin("public.cloud.shiftr.io", net);
   client.onMessage(messageReceived);
-
   connect();
 }
 
 void loop() {
   client.loop();
-  
   if (!client.connected()) {
     connect();
   }
-
   if (millis() - lastMillis > 1000) {
     lastMillis = millis();
     client.publish("/Hello", "World!");
