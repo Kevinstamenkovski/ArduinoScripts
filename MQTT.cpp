@@ -12,13 +12,9 @@ void connect() {
     Serial.print(".");
     delay(1000);
   }
-
   Serial.println("\nconnected!");
-
   client.subscribe("/hello");
-  // client.unsubscribe("/hello");
 }
-
 void messageReceived(String &topic, String &payload) {
   Serial.println("incoming: " + topic + " - " + payload);
 }
