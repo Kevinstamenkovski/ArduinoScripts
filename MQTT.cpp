@@ -11,6 +11,7 @@ void connect() {
     Serial.print(".");
     delay(1000);
   }
+
   Serial.println("\nconnected!");
   client.subscribe("/hello");
 }
