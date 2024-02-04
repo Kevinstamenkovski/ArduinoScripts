@@ -1,4 +1,3 @@
-
 #include <Ethernet.h>
 #include <MQTT.h>
 
@@ -25,14 +24,15 @@ void setup() {
   client.onMessage(messageReceived);
   connect();
 }
+
 void loop() {
   client.loop();
   if (!client.connected()) {
     connect();
   }
+
   if (millis() - lastMillis > 1000) {
     lastMillis = millis();
     client.publish("/Hello", "World!");
   }
 }
-
