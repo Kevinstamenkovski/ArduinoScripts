@@ -24,7 +24,6 @@ void setup() {
   client.onMessage(messageReceived);
   connect();
 }
-
 void loop() {
   client.loop();
   if (!client.connected()) {
