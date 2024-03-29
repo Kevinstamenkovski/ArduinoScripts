@@ -1,6 +1,5 @@
 #include <Ethernet.h>
 #include <MQTT.h>
-
 byte mac[] = {0xA8, 0x61, 0x0A, 0xAE, 0xA9, 0x1B};
 EthernetClient net;
 MQTTClient client;
