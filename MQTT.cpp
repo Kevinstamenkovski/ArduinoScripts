@@ -9,7 +9,7 @@ void connect() {
   while (!client.connect("arduino", "public", "public")) {
     Serial.print(".");
     delay(1000);
-  }  
+  }   
   Serial.println("\nconnected!");
   client.subscribe("/hello");
 }
