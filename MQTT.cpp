@@ -28,7 +28,6 @@ void loop() {
   if (!client.connected()) {
     connect();
   }
-
   if (millis() - lastMillis > 1000) {
     lastMillis = millis();
     client.publish("/Hello", "World!");
