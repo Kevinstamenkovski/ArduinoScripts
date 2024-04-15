@@ -16,6 +16,7 @@ void connect() {
 void messageReceived(String &topic, String &payload) {
   Serial.println("incoming: " + topic + " - " + payload);
 }
+
 void setup() {
   Serial.begin(9600);
   Ethernet.begin(mac);
